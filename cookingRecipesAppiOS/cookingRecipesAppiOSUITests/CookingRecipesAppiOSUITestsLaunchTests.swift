@@ -1,13 +1,13 @@
 //
-//  cookingRecipesApp_iOSUITestsLaunchTests.swift
-//  cookingRecipesApp_iOSUITests
+//  cookingRecipesAppiOSUITestsLaunchTests.swift
+//  cookingRecipesAppiOSUITests
 //
 //  Created by osvaldo cespedes on 09/03/23.
 //
 
 import XCTest
 
-final class cookingRecipesApp_iOSUITestsLaunchTests: XCTestCase {
+final class CookingRecipesAppiOSUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

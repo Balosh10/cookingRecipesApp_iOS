@@ -13,9 +13,9 @@
 		F9BAA0A629BA648B00A6A94C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BAA0A429BA648B00A6A94C /* Main.storyboard */; };
 		F9BAA0A829BA648C00A6A94C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BAA0A729BA648C00A6A94C /* Assets.xcassets */; };
 		F9BAA0AB29BA648C00A6A94C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BAA0A929BA648C00A6A94C /* LaunchScreen.storyboard */; };
-		F9BAA0B629BA648D00A6A94C /* cookingRecipesApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0B529BA648D00A6A94C /* cookingRecipesApp_iOSTests.swift */; };
-		F9BAA0C029BA648D00A6A94C /* cookingRecipesApp_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0BF29BA648D00A6A94C /* cookingRecipesApp_iOSUITests.swift */; };
-		F9BAA0C229BA648D00A6A94C /* cookingRecipesApp_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0C129BA648D00A6A94C /* cookingRecipesApp_iOSUITestsLaunchTests.swift */; };
+		F9BAA0B629BA648D00A6A94C /* CookingRecipesAppiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0B529BA648D00A6A94C /* CookingRecipesAppiOSTests.swift */; };
+		F9BAA0C029BA648D00A6A94C /* CookingRecipesAppiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0BF29BA648D00A6A94C /* CookingRecipesAppiOSUITests.swift */; };
+		F9BAA0C229BA648D00A6A94C /* CookingRecipesAppiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0C129BA648D00A6A94C /* CookingRecipesAppiOSUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,19 +24,19 @@
 			containerPortal = F9BAA09329BA648B00A6A94C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F9BAA09A29BA648B00A6A94C;
-			remoteInfo = cookingRecipesApp_iOS;
+			remoteInfo = CookingRecipesAppiOS;
 		};
 		F9BAA0BC29BA648D00A6A94C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9BAA09329BA648B00A6A94C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F9BAA09A29BA648B00A6A94C;
-			remoteInfo = cookingRecipesApp_iOS;
+			remoteInfo = CookingRecipesAppiOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F9BAA09B29BA648B00A6A94C /* cookingRecipesApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cookingRecipesApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BAA09B29BA648B00A6A94C /* CookingRecipesAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingRecipesAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BAA09E29BA648B00A6A94C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BAA0A029BA648B00A6A94C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F9BAA0A229BA648B00A6A94C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +44,11 @@
 		F9BAA0A729BA648C00A6A94C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9BAA0AA29BA648C00A6A94C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9BAA0AC29BA648C00A6A94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9BAA0B129BA648D00A6A94C /* cookingRecipesApp_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cookingRecipesApp_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9BAA0B529BA648D00A6A94C /* cookingRecipesApp_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingRecipesApp_iOSTests.swift; sourceTree = "<group>"; };
-		F9BAA0BB29BA648D00A6A94C /* cookingRecipesApp_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cookingRecipesApp_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9BAA0BF29BA648D00A6A94C /* cookingRecipesApp_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingRecipesApp_iOSUITests.swift; sourceTree = "<group>"; };
-		F9BAA0C129BA648D00A6A94C /* cookingRecipesApp_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingRecipesApp_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9BAA0B129BA648D00A6A94C /* CookingRecipesAppiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingRecipesAppiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BAA0B529BA648D00A6A94C /* CookingRecipesAppiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingRecipesAppiOSTests.swift; sourceTree = "<group>"; };
+		F9BAA0BB29BA648D00A6A94C /* CookingRecipesAppiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingRecipesAppiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BAA0BF29BA648D00A6A94C /* CookingRecipesAppiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingRecipesAppiOSUITests.swift; sourceTree = "<group>"; };
+		F9BAA0C129BA648D00A6A94C /* CookingRecipesAppiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingRecipesAppiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,9 @@
 		F9BAA09229BA648B00A6A94C = {
 			isa = PBXGroup;
 			children = (
-				F9BAA09D29BA648B00A6A94C /* cookingRecipesApp_iOS */,
-				F9BAA0B429BA648D00A6A94C /* cookingRecipesApp_iOSTests */,
-				F9BAA0BE29BA648D00A6A94C /* cookingRecipesApp_iOSUITests */,
+				F9BAA09D29BA648B00A6A94C /* CookingRecipesAppiOS */,
+				F9BAA0B429BA648D00A6A94C /* CookingRecipesAppiOSTests */,
+				F9BAA0BE29BA648D00A6A94C /* CookingRecipesAppiOSUITests */,
 				F9BAA09C29BA648B00A6A94C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +89,14 @@
 		F9BAA09C29BA648B00A6A94C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9BAA09B29BA648B00A6A94C /* cookingRecipesApp_iOS.app */,
-				F9BAA0B129BA648D00A6A94C /* cookingRecipesApp_iOSTests.xctest */,
-				F9BAA0BB29BA648D00A6A94C /* cookingRecipesApp_iOSUITests.xctest */,
+				F9BAA09B29BA648B00A6A94C /* CookingRecipesAppiOS.app */,
+				F9BAA0B129BA648D00A6A94C /* CookingRecipesAppiOSTests.xctest */,
+				F9BAA0BB29BA648D00A6A94C /* CookingRecipesAppiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9BAA09D29BA648B00A6A94C /* cookingRecipesApp_iOS */ = {
+		F9BAA09D29BA648B00A6A94C /* CookingRecipesAppiOS */ = {
 			isa = PBXGroup;
 			children = (
 				F9BAA09E29BA648B00A6A94C /* AppDelegate.swift */,
@@ -107,49 +107,50 @@
 				F9BAA0A929BA648C00A6A94C /* LaunchScreen.storyboard */,
 				F9BAA0AC29BA648C00A6A94C /* Info.plist */,
 			);
-			path = cookingRecipesApp_iOS;
+			path = CookingRecipesAppiOS;
 			sourceTree = "<group>";
 		};
-		F9BAA0B429BA648D00A6A94C /* cookingRecipesApp_iOSTests */ = {
+		F9BAA0B429BA648D00A6A94C /* CookingRecipesAppiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9BAA0B529BA648D00A6A94C /* cookingRecipesApp_iOSTests.swift */,
+				F9BAA0B529BA648D00A6A94C /* CookingRecipesAppiOSTests.swift */,
 			);
-			path = cookingRecipesApp_iOSTests;
+			path = CookingRecipesAppiOSTests;
 			sourceTree = "<group>";
 		};
-		F9BAA0BE29BA648D00A6A94C /* cookingRecipesApp_iOSUITests */ = {
+		F9BAA0BE29BA648D00A6A94C /* CookingRecipesAppiOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F9BAA0BF29BA648D00A6A94C /* cookingRecipesApp_iOSUITests.swift */,
-				F9BAA0C129BA648D00A6A94C /* cookingRecipesApp_iOSUITestsLaunchTests.swift */,
+				F9BAA0BF29BA648D00A6A94C /* CookingRecipesAppiOSUITests.swift */,
+				F9BAA0C129BA648D00A6A94C /* CookingRecipesAppiOSUITestsLaunchTests.swift */,
 			);
-			path = cookingRecipesApp_iOSUITests;
+			path = CookingRecipesAppiOSUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F9BAA09A29BA648B00A6A94C /* cookingRecipesApp_iOS */ = {
+		F9BAA09A29BA648B00A6A94C /* CookingRecipesAppiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9BAA0C529BA648D00A6A94C /* Build configuration list for PBXNativeTarget "cookingRecipesApp_iOS" */;
+			buildConfigurationList = F9BAA0C529BA648D00A6A94C /* Build configuration list for PBXNativeTarget "CookingRecipesAppiOS" */;
 			buildPhases = (
 				F9BAA09729BA648B00A6A94C /* Sources */,
 				F9BAA09829BA648B00A6A94C /* Frameworks */,
 				F9BAA09929BA648B00A6A94C /* Resources */,
+				F9BAA0CF29BA654100A6A94C /* Run Script SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = cookingRecipesApp_iOS;
-			productName = cookingRecipesApp_iOS;
-			productReference = F9BAA09B29BA648B00A6A94C /* cookingRecipesApp_iOS.app */;
+			name = CookingRecipesAppiOS;
+			productName = CookingRecipesAppiOS;
+			productReference = F9BAA09B29BA648B00A6A94C /* CookingRecipesAppiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F9BAA0B029BA648D00A6A94C /* cookingRecipesApp_iOSTests */ = {
+		F9BAA0B029BA648D00A6A94C /* CookingRecipesAppiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9BAA0C829BA648D00A6A94C /* Build configuration list for PBXNativeTarget "cookingRecipesApp_iOSTests" */;
+			buildConfigurationList = F9BAA0C829BA648D00A6A94C /* Build configuration list for PBXNativeTarget "CookingRecipesAppiOSTests" */;
 			buildPhases = (
 				F9BAA0AD29BA648D00A6A94C /* Sources */,
 				F9BAA0AE29BA648D00A6A94C /* Frameworks */,
@@ -160,14 +161,14 @@
 			dependencies = (
 				F9BAA0B329BA648D00A6A94C /* PBXTargetDependency */,
 			);
-			name = cookingRecipesApp_iOSTests;
-			productName = cookingRecipesApp_iOSTests;
-			productReference = F9BAA0B129BA648D00A6A94C /* cookingRecipesApp_iOSTests.xctest */;
+			name = CookingRecipesAppiOSTests;
+			productName = CookingRecipesAppiOSTests;
+			productReference = F9BAA0B129BA648D00A6A94C /* CookingRecipesAppiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F9BAA0BA29BA648D00A6A94C /* cookingRecipesApp_iOSUITests */ = {
+		F9BAA0BA29BA648D00A6A94C /* CookingRecipesAppiOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9BAA0CB29BA648D00A6A94C /* Build configuration list for PBXNativeTarget "cookingRecipesApp_iOSUITests" */;
+			buildConfigurationList = F9BAA0CB29BA648D00A6A94C /* Build configuration list for PBXNativeTarget "CookingRecipesAppiOSUITests" */;
 			buildPhases = (
 				F9BAA0B729BA648D00A6A94C /* Sources */,
 				F9BAA0B829BA648D00A6A94C /* Frameworks */,
@@ -178,9 +179,9 @@
 			dependencies = (
 				F9BAA0BD29BA648D00A6A94C /* PBXTargetDependency */,
 			);
-			name = cookingRecipesApp_iOSUITests;
-			productName = cookingRecipesApp_iOSUITests;
-			productReference = F9BAA0BB29BA648D00A6A94C /* cookingRecipesApp_iOSUITests.xctest */;
+			name = CookingRecipesAppiOSUITests;
+			productName = CookingRecipesAppiOSUITests;
+			productReference = F9BAA0BB29BA648D00A6A94C /* CookingRecipesAppiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F9BAA09629BA648B00A6A94C /* Build configuration list for PBXProject "cookingRecipesApp_iOS" */;
+			buildConfigurationList = F9BAA09629BA648B00A6A94C /* Build configuration list for PBXProject "CookingRecipesAppiOS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9BAA09A29BA648B00A6A94C /* cookingRecipesApp_iOS */,
-				F9BAA0B029BA648D00A6A94C /* cookingRecipesApp_iOSTests */,
-				F9BAA0BA29BA648D00A6A94C /* cookingRecipesApp_iOSUITests */,
+				F9BAA09A29BA648B00A6A94C /* CookingRecipesAppiOS */,
+				F9BAA0B029BA648D00A6A94C /* CookingRecipesAppiOSTests */,
+				F9BAA0BA29BA648D00A6A94C /* CookingRecipesAppiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +254,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F9BAA0CF29BA654100A6A94C /* Run Script SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9BAA09729BA648B00A6A94C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BAA0B629BA648D00A6A94C /* cookingRecipesApp_iOSTests.swift in Sources */,
+				F9BAA0B629BA648D00A6A94C /* CookingRecipesAppiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BAA0C029BA648D00A6A94C /* cookingRecipesApp_iOSUITests.swift in Sources */,
-				F9BAA0C229BA648D00A6A94C /* cookingRecipesApp_iOSUITestsLaunchTests.swift in Sources */,
+				F9BAA0C029BA648D00A6A94C /* CookingRecipesAppiOSUITests.swift in Sources */,
+				F9BAA0C229BA648D00A6A94C /* CookingRecipesAppiOSUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +308,12 @@
 /* Begin PBXTargetDependency section */
 		F9BAA0B329BA648D00A6A94C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9BAA09A29BA648B00A6A94C /* cookingRecipesApp_iOS */;
+			target = F9BAA09A29BA648B00A6A94C /* CookingRecipesAppiOS */;
 			targetProxy = F9BAA0B229BA648D00A6A94C /* PBXContainerItemProxy */;
 		};
 		F9BAA0BD29BA648D00A6A94C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9BAA09A29BA648B00A6A94C /* cookingRecipesApp_iOS */;
+			target = F9BAA09A29BA648B00A6A94C /* CookingRecipesAppiOS */;
 			targetProxy = F9BAA0BC29BA648D00A6A94C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -439,7 +461,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S3ZJKHQJTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = cookingRecipesApp_iOS/Info.plist;
+				INFOPLIST_FILE = CookingRecipesAppiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +489,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S3ZJKHQJTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = cookingRecipesApp_iOS/Info.plist;
+				INFOPLIST_FILE = CookingRecipesAppiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -502,7 +524,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cookingRecipesApp_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cookingRecipesApp_iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookingRecipesAppiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CookingRecipesAppiOS";
 			};
 			name = Debug;
 		};
@@ -522,7 +544,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cookingRecipesApp_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cookingRecipesApp_iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookingRecipesAppiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CookingRecipesAppiOS";
 			};
 			name = Release;
 		};
@@ -540,7 +562,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = cookingRecipesApp_iOS;
+				TEST_TARGET_NAME = CookingRecipesAppiOS;
 			};
 			name = Debug;
 		};
@@ -558,14 +580,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = cookingRecipesApp_iOS;
+				TEST_TARGET_NAME = CookingRecipesAppiOS;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9BAA09629BA648B00A6A94C /* Build configuration list for PBXProject "cookingRecipesApp_iOS" */ = {
+		F9BAA09629BA648B00A6A94C /* Build configuration list for PBXProject "CookingRecipesAppiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9BAA0C329BA648D00A6A94C /* Debug */,
@@ -574,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9BAA0C529BA648D00A6A94C /* Build configuration list for PBXNativeTarget "cookingRecipesApp_iOS" */ = {
+		F9BAA0C529BA648D00A6A94C /* Build configuration list for PBXNativeTarget "CookingRecipesAppiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9BAA0C629BA648D00A6A94C /* Debug */,
@@ -583,7 +605,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9BAA0C829BA648D00A6A94C /* Build configuration list for PBXNativeTarget "cookingRecipesApp_iOSTests" */ = {
+		F9BAA0C829BA648D00A6A94C /* Build configuration list for PBXNativeTarget "CookingRecipesAppiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9BAA0C929BA648D00A6A94C /* Debug */,
@@ -592,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9BAA0CB29BA648D00A6A94C /* Build configuration list for PBXNativeTarget "cookingRecipesApp_iOSUITests" */ = {
+		F9BAA0CB29BA648D00A6A94C /* Build configuration list for PBXNativeTarget "CookingRecipesAppiOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9BAA0CC29BA648D00A6A94C /* Debug */,

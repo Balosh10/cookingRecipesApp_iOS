@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "imagen": "seaFoodSoup",
+        "name": "RECETA DE SOPA DE MARISCOS",
+        "description": "Olvídate de los platillos aburridos y mejor prepara esta sopa de mariscos para una comida familiar o como parte de un menú de la semana. Además, gracias a Del Monte® tenemos las verduras más frescas que nos facilitarán la cocción de nuestro platillo. ¡Prueba esta rica sopa de mariscos, está llena de sabor!",
+        "ingredients": [
+            "suficiente de PAM Aceite en aerosol",
+            "2 cucharadas de Ajo picado Del Monte®",
+            "1 taza de cebolla, finamente picada",
+            "2 tazas de cabeza de camarón , y cáscaras",
+            "1 cabeza de pescado, o cola de pescado",
+            "1/2 tazas de pimiento rojo, en tiras delgadas",
+            "1/4 tazas de pasta de tomate",
+            "2 cucharadas de Chiles chipotle Del Monte®",
+            "6 tazas de agua",
+            "2 laurel"
+        ]
+    },
+    {
+        "id": 2,
+        "imagen": "soupMushroom",
+        "name": "CALDO DE HONGOS CON EPAZOTE",
+        "description": "Olvídate de los platillos aburridos y mejor prepara esta sopa de mariscos para una comida familiar o como parte de un menú de la semana. Además, gracias a Del Monte® tenemos las verduras más frescas que nos facilitarán la cocción de nuestro platillo. ¡Prueba esta rica sopa de epazote, está llena de sabor!",
+        "ingredients": [
+            "suficiente de PAM Aceite en aerosol",
+            "2 cucharadas de Ajo picado Del Monte®",
+            "1 taza de cebolla, finamente picada",
+            "2 tazas de cabeza de camarón , y cáscaras",
+            "1 cabeza de pescado, o cola de pescado",
+            "1/2 tazas de pimiento rojo, en tiras delgadas",
+            "1/4 tazas de pasta de tomate",
+            "2 cucharadas de Chiles chipotle Del Monte®",
+            "6 tazas de agua",
+            "2 laurel"
+        ]
+    },
+    {
+        "id": 3,
+        "imagen": "brandadeCod",
+        "name": "Brandada de bacalao",
+        "description": "Brandada de bacalao: receta de la más deliciosa crema para untar sin cansarse",
+        "ingredients": [
+            "suficiente de PAM Aceite en aerosol",
+            "2 cucharadas de Ajo picado Del Monte®",
+            "1 taza de cebolla, finamente picada",
+            "2 tazas de cabeza de camarón , y cáscaras",
+            "1 cabeza de pescado, o cola de pescado",
+            "1/2 tazas de pimiento rojo, en tiras delgadas",
+            "1/4 tazas de pasta de tomate",
+            "2 cucharadas de Chiles chipotle Del Monte®",
+            "6 tazas de agua",
+            "2 laurel"
+        ]
+    },
+    {
+        "id": 4,
+        "imagen": "potatoMayonnaise",
+        "name": "Ensaladilla de patata con mayonesa de limón y mostaza",
+        "description": "Cocemos las patatas lavadas con piel con abundante agua, según su tamaño, unos 30 minutos; lo mejor es comprobar el punto pinchando con una brocheta en la parte más gruesa. Si entra con facilidad, están listas y las podemos retirar.",
+        "ingredients": [
+            "suficiente de PAM Aceite en aerosol",
+            "2 cucharadas de Ajo picado Del Monte®",
+            "1 taza de cebolla, finamente picada",
+            "2 tazas de cabeza de camarón , y cáscaras",
+            "1 cabeza de pescado, o cola de pescado",
+            "1/2 tazas de pimiento rojo, en tiras delgadas",
+            "1/4 tazas de pasta de tomate",
+            "2 cucharadas de Chiles chipotle Del Monte®",
+            "6 tazas de agua",
+            "2 laurel"
+        ]
+    }
+]

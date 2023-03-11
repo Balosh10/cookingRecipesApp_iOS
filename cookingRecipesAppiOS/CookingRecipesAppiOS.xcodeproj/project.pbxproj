@@ -19,9 +19,6 @@
 		F928752429BA730900C2F6AE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928751A29BA730900C2F6AE /* DetailRouter.swift */; };
 		F928752729BA730900C2F6AE /* YPRecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928751F29BA730900C2F6AE /* YPRecipeDetailView.swift */; };
 		F928754329BA732D00C2F6AE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928753629BA732D00C2F6AE /* MapView.swift */; };
-		F928754429BA732D00C2F6AE /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F928753729BA732D00C2F6AE /* MapView.xib */; };
-		F928754529BA732D00C2F6AE /* MapLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928753929BA732D00C2F6AE /* MapLocalDataManager.swift */; };
-		F928754629BA732D00C2F6AE /* MapRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928753A29BA732D00C2F6AE /* MapRemoteDataManager.swift */; };
 		F928754729BA732D00C2F6AE /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928753C29BA732D00C2F6AE /* MapInteractor.swift */; };
 		F928754829BA732D00C2F6AE /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928753E29BA732D00C2F6AE /* MapRouter.swift */; };
 		F928754929BA732D00C2F6AE /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928754029BA732D00C2F6AE /* MapPresenter.swift */; };
@@ -51,6 +48,9 @@
 		F928758629BA870300C2F6AE /* ufonts.com_gotham-book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F928758229BA870300C2F6AE /* ufonts.com_gotham-book.ttf */; };
 		F928758829BA8BE900C2F6AE /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928758729BA8BE900C2F6AE /* UISearchBar+Extension.swift */; };
 		F928758A29BA8D9100C2F6AE /* UIToolbar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928758929BA8D9100C2F6AE /* UIToolbar+Extension.swift */; };
+		F9553F4F29BCCB6200D49107 /* YPMapPinStoresAnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9553F4E29BCCB6200D49107 /* YPMapPinStoresAnotations.swift */; };
+		F9553F5129BCCB7F00D49107 /* YPCustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9553F5029BCCB7F00D49107 /* YPCustomAnnotationView.swift */; };
+		F9553F5329BCCBBA00D49107 /* YPPinImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9553F5229BCCBBA00D49107 /* YPPinImage.swift */; };
 		F9BAA09F29BA648B00A6A94C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA09E29BA648B00A6A94C /* AppDelegate.swift */; };
 		F9BAA0A129BA648B00A6A94C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BAA0A029BA648B00A6A94C /* SceneDelegate.swift */; };
 		F9BAA0A829BA648C00A6A94C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BAA0A729BA648C00A6A94C /* Assets.xcassets */; };
@@ -102,9 +102,6 @@
 		F928751A29BA730900C2F6AE /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		F928751F29BA730900C2F6AE /* YPRecipeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPRecipeDetailView.swift; sourceTree = "<group>"; };
 		F928753629BA732D00C2F6AE /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		F928753729BA732D00C2F6AE /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
-		F928753929BA732D00C2F6AE /* MapLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocalDataManager.swift; sourceTree = "<group>"; };
-		F928753A29BA732D00C2F6AE /* MapRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRemoteDataManager.swift; sourceTree = "<group>"; };
 		F928753C29BA732D00C2F6AE /* MapInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		F928753E29BA732D00C2F6AE /* MapRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		F928754029BA732D00C2F6AE /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
@@ -133,6 +130,9 @@
 		F928758229BA870300C2F6AE /* ufonts.com_gotham-book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_gotham-book.ttf"; sourceTree = "<group>"; };
 		F928758729BA8BE900C2F6AE /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
 		F928758929BA8D9100C2F6AE /* UIToolbar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Extension.swift"; sourceTree = "<group>"; };
+		F9553F4E29BCCB6200D49107 /* YPMapPinStoresAnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPMapPinStoresAnotations.swift; sourceTree = "<group>"; };
+		F9553F5029BCCB7F00D49107 /* YPCustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPCustomAnnotationView.swift; sourceTree = "<group>"; };
+		F9553F5229BCCBBA00D49107 /* YPPinImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPPinImage.swift; sourceTree = "<group>"; };
 		F9BAA09B29BA648B00A6A94C /* CookingRecipesAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingRecipesAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BAA09E29BA648B00A6A94C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BAA0A029BA648B00A6A94C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -364,7 +364,6 @@
 			isa = PBXGroup;
 			children = (
 				F928753629BA732D00C2F6AE /* MapView.swift */,
-				F928753729BA732D00C2F6AE /* MapView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,8 +371,9 @@
 		F928753829BA732D00C2F6AE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				F928753929BA732D00C2F6AE /* MapLocalDataManager.swift */,
-				F928753A29BA732D00C2F6AE /* MapRemoteDataManager.swift */,
+				F9553F4E29BCCB6200D49107 /* YPMapPinStoresAnotations.swift */,
+				F9553F5029BCCB7F00D49107 /* YPCustomAnnotationView.swift */,
+				F9553F5229BCCBBA00D49107 /* YPPinImage.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -711,7 +711,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F928754429BA732D00C2F6AE /* MapView.xib in Resources */,
 				F9BAA0AB29BA648C00A6A94C /* LaunchScreen.storyboard in Resources */,
 				F9BAA0A829BA648C00A6A94C /* Assets.xcassets in Resources */,
 				F928757129BA7B8500C2F6AE /* recipesAvailable.json in Resources */,
@@ -767,18 +766,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D8B29B29BBFBCE0045C77F /* UIViewController+Extension.swift in Sources */,
-				F928754529BA732D00C2F6AE /* MapLocalDataManager.swift in Sources */,
 				F928752129BA730900C2F6AE /* DetailInteractor.swift in Sources */,
 				F928754929BA732D00C2F6AE /* MapPresenter.swift in Sources */,
 				F928754729BA732D00C2F6AE /* MapInteractor.swift in Sources */,
 				F9D8B29E29BC02AB0045C77F /* UIRecipeCollectionView.swift in Sources */,
 				F92874FF29BA720300C2F6AE /* HomeView.swift in Sources */,
 				F928758A29BA8D9100C2F6AE /* UIToolbar+Extension.swift in Sources */,
-				F928754629BA732D00C2F6AE /* MapRemoteDataManager.swift in Sources */,
 				F928757329BA7C6F00C2F6AE /* Bundle+Extension.swift in Sources */,
 				F928756F29BA791800C2F6AE /* RoundedImageView.swift in Sources */,
 				F928752429BA730900C2F6AE /* DetailRouter.swift in Sources */,
 				F928755D29BA772C00C2F6AE /* Color.swift in Sources */,
+				F9553F5129BCCB7F00D49107 /* YPCustomAnnotationView.swift in Sources */,
+				F9553F4F29BCCB6200D49107 /* YPMapPinStoresAnotations.swift in Sources */,
 				F9D8B2A029BC05380045C77F /* HomeSearchView.swift in Sources */,
 				F928756C29BA78B300C2F6AE /* MyTapGestureRecognizer.swift in Sources */,
 				F9D8B29529BBFB360045C77F /* YPRecommendedRecipesView.swift in Sources */,
@@ -798,6 +797,7 @@
 				F928756129BA777900C2F6AE /* Icon.swift in Sources */,
 				F928752729BA730900C2F6AE /* YPRecipeDetailView.swift in Sources */,
 				F928755029BA75CD00C2F6AE /* CollectionViewDelegate.swift in Sources */,
+				F9553F5329BCCBBA00D49107 /* YPPinImage.swift in Sources */,
 				F928757E29BA83D400C2F6AE /* UIApplication+Extension.swift in Sources */,
 				F9D8B29329BBF6880045C77F /* TagFlowLayoutVertical.swift in Sources */,
 				F928750229BA720300C2F6AE /* HomeProtocols.swift in Sources */,

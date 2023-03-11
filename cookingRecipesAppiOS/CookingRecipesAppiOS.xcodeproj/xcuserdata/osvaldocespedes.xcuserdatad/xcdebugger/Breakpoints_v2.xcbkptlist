@@ -39,48 +39,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AC0B2321-9D19-4574-875B-321630E4EB2D"
+            uuid = "1A786DED-9460-45F4-B9FC-7B59C790BA8E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookingRecipesAppiOS/Screens/Map/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "mapView(_:rendererFor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A8CDEFC1-E37E-4DD0-B546-07E3D7B299D0"
+            uuid = "A5DA7B9A-ECFC-4A55-8A76-07DC2FA7C4EF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookingRecipesAppiOS/Screens/Map/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "loadInfoLocation()"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "mapView(_:rendererFor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D6CB05B2-0EC1-4D38-B2FC-B2D2F35FC0A0"
+            uuid = "04E073DD-8E9F-45F5-909E-BC4A2BF6DCD3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookingRecipesAppiOS/Screens/Map/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "acZoomRest()"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "mapView(_:viewFor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

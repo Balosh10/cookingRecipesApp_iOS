@@ -8,9 +8,7 @@
 
 import Foundation
 
-class MapPresenter  {
-    
-    // MARK: Properties
+class MapPresenter {
     weak var view: MapViewProtocol?
     var interactor: MapInteractorInputProtocol?
     var router: MapRouterProtocol?
@@ -18,11 +16,12 @@ class MapPresenter  {
 }
 
 extension MapPresenter: MapPresenterProtocol {
-    // TODO: implement presenter methods
     func viewDidLoad() {
+        view?.initUI()
+        view?.setupLocation()
     }
 }
 
 extension MapPresenter: MapInteractorOutputProtocol {
-    // TODO: implement interactor output methods
+    
 }

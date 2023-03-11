@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapView: UIViewController {
+class MapView: UIViewController, CLLocationManagerDelegate {
     var mapView: MKMapView = {
         let mapView = MKMapView()
         mapView.isUserInteractionEnabled = true
@@ -20,23 +20,31 @@ class MapView: UIViewController {
         mapView.mapType = .standard
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
-        mapView.register(CustomAnnotationView.self,
-                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.register(YPCustomAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         return mapView
     }()
     private var btnZoomPlus: UIButton = {
         var btnZoomPlus = UIButton()
         btnZoomPlus.translatesAutoresizingMaskIntoConstraints = false
         btnZoomPlus.backgroundColor = .clear
-        btnZoomPlus.setImage(UIImage(systemName: "plus")?.withTintColor(.CPWhite100, renderingMode: .alwaysOriginal) ?? UIImage(), for: .normal)
+        let icPlus = UIImage(systemName: "plus")?.withTintColor(.CPWhite100,
+                                                                  renderingMode: .alwaysOriginal)
+        if let icon = icPlus {
+            btnZoomPlus.setImage(icon, for: .normal)
+        }
         return btnZoomPlus
     }()
     private var btnZoomRest: UIButton = {
         var btnZoomRest = UIButton()
         btnZoomRest.translatesAutoresizingMaskIntoConstraints = false
         btnZoomRest.backgroundColor = .clear
-        btnZoomRest.setImage(UIImage(systemName: "minus")?.withTintColor(.CPWhite100, renderingMode: .alwaysOriginal) ?? UIImage(), for: .normal)
+        let icMinus = UIImage(systemName: "minus")?.withTintColor(.CPWhite100,
+                                                                  renderingMode: .alwaysOriginal)
+        if let icon = icMinus {
+            btnZoomRest.setImage(icon, for: .normal)
+        }
         return btnZoomRest
     }()
     private lazy var stackView: UIStackView = {
@@ -49,6 +57,15 @@ class MapView: UIViewController {
         stackView.distribution = .fillEqually
         return stackView
     }()
+    private lazy var btnBack: UIButton = {
+        var btnBack = UIButton()
+        let iconBack = UIImage(systemName: "arrow.backward")?.withTintColor(.CPWhite100, renderingMode: .alwaysOriginal)
+        btnBack.setImage(iconBack, for: .normal)
+        btnBack.radiusView(radius: 22, .CPPrincipal)
+        btnBack.backgroundColor = .CPPrincipal.withAlphaComponent(0.7)
+        btnBack.translatesAutoresizingMaskIntoConstraints = false
+        return btnBack
+    }()
     
     // MARK: Properties
     var presenter: MapPresenterProtocol?
@@ -58,10 +75,21 @@ class MapView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
+    }
+}
+
+extension MapView: MapViewProtocol {
+    func initUI() {
         mapView.delegate = self
-        [mapView, stackView].forEach({view.addSubview($0)})
+        [btnBack, mapView, stackView].forEach({view.addSubview($0)})
+        view.bringSubviewToFront(btnBack)
         view.sendSubviewToBack(mapView)
         NSLayoutConstraint.activate([
+            btnBack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            btnBack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            btnBack.heightAnchor.constraint(equalToConstant: 44),
+            btnBack.widthAnchor.constraint(equalToConstant: 44),
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mapView.topAnchor.constraint(equalTo: view.topAnchor),
             mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -71,6 +99,9 @@ class MapView: UIViewController {
             stackView.heightAnchor.constraint(equalToConstant: 88),
             stackView.widthAnchor.constraint(equalToConstant: 30)
         ])
+        btnBack.addTapGesture { [weak self] in
+            self?.dismiss(animated: true)
+        }
         stackView.addArrangedSubview(btnZoomPlus)
         stackView.addArrangedSubview(btnZoomRest)
         btnZoomPlus.addTapGesture { [weak self] in
@@ -81,12 +112,27 @@ class MapView: UIViewController {
             guard let self = self else { return }
             self.acZoomRest()
         }
+    }
+    func setupLocation() {
         loadInfoLocation()
         guard let location = locationManager?.location?.coordinate else {
             return
         }
-        loadAddressMap(lat: 25.6536161, long: -100.4295552)
-
+        let locationRecipe = CLLocationCoordinate2D.init(latitude: 25.6536161,
+                                                   longitude: -100.4295552)
+        loadAddressMap(lat: location.latitude, long: location.longitude)
+        var allAnotation: [MKAnnotation] = []
+        allAnotation.append(YPMapPinStoresAnotations(title: "Demo",
+                                                   rate: "5",
+                                                   locationName: "nuevo",
+                                                   coordinate: locationRecipe,
+                                                   imageToPin: CPIcon.of(.icPoint)!))
+        
+        DispatchQueue.main.async {
+            allAnotation.forEach {
+                self.mapView.addAnnotation($0)
+            }
+        }
     }
     func acZoomPlus() {
         var region: MKCoordinateRegion = mapView.region
@@ -109,123 +155,36 @@ class MapView: UIViewController {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.distanceFilter = kCLDistanceFilterNone
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.startUpdatingLocation()
     }
 }
-
-extension MapView: MapViewProtocol {
-
-}
-extension MapView: MKMapViewDelegate, CLLocationManagerDelegate {
-
-}
-
-
-class MapPinStoresAnotations: NSObject, MKAnnotation {
-    var identifier = "locations"
-    let title: String?
-    let rate: String
-    let locationName: String
-    let coordinate: CLLocationCoordinate2D
-    let image: UIImage?
-    let idCat: Int?
-    let strNameCat: String?
-    let icon: String?
-    init(title: String, rate:String, locationName: String, coordinate: CLLocationCoordinate2D, imageToPin:UIImage, idCatego: Int, strNameCat: String, icon: String? = nil) {
-        self.title = title
-        self.rate = rate
-        self.locationName = locationName
-        self.coordinate = coordinate
-        self.image = imageToPin
-        self.idCat = idCatego
-        self.strNameCat = strNameCat
-        self.icon = icon
-    }
-}
-class CustomAnnotationView: MKMarkerAnnotationView {
-    var identifier = "CustomAnnotationView"
-    var dCalif: Double?
-    static let glyphImages: UIImage = {
-        let rect = CGRect(origin: .zero, size: CGSize(width: 40, height: 40))
-        return UIGraphicsImageRenderer(bounds: rect).image { _ in
-            let radius: CGFloat = 11
-            let offset: CGFloat = 7
-            let insetY: CGFloat = 5
-            let center = CGPoint(x: rect.midX, y: rect.maxY - radius - insetY)
-            let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: .pi, clockwise: true)
-            path.addQuadCurve(to: CGPoint(x: rect.midX, y: rect.minY + insetY), controlPoint: CGPoint(x: rect.midX - radius, y: center.y - offset))
-            path.addQuadCurve(to: CGPoint(x: rect.midX + radius, y: center.y), controlPoint: CGPoint(x: rect.midX + radius, y: center.y - offset))
-            path.close()
-            UIColor.clear.setFill()
-            path.fill()
+extension MapView: MKMapViewDelegate, MKLocalSearchCompleterDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        var circleRenderer = MKCircleRenderer()
+        if let overlay = overlay as? MKCircle {
+            circleRenderer = MKCircleRenderer(circle: overlay)
+            circleRenderer.fillColor = .CPPrincipal
+            circleRenderer.strokeColor = .CPSecundary
+            circleRenderer.alpha = 0.5
         }
-    }()
-    func drawImageWithProfilePic(pp: UIImage, image: UIImage) -> UIImage {
-        let imgView = UIImageView(image: image)
-        let picImgView = UIImageView(image: pp)
-        picImgView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        imgView.addSubview(picImgView)
-        picImgView.center.x = imgView.center.x
-        picImgView.center.y = imgView.center.y - 7
-        picImgView.layer.cornerRadius = picImgView.frame.width/2
-        picImgView.clipsToBounds = true
-        imgView.setNeedsLayout()
-        picImgView.setNeedsLayout()
-        let newImage = imageWithView(view: imgView)
-        return newImage
+        return circleRenderer
     }
-
-    func imageWithView(view: UIView) -> UIImage {
-        var image: UIImage?
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
-        if let context = UIGraphicsGetCurrentContext() {
-            view.layer.render(in: context)
-            image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-        }
-        return image ?? UIImage()
-    }
-    //var imageBase:UIImage = UIImage(gsMyNamed: "iconStore") ?? UIImage()
-    override var annotation: MKAnnotation? {
-        didSet { configure(for: annotation) }
-    }
-
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-       // glyphImage = Self.glyphImage
-        markerTintColor = UIColor.red
-        self.bounds.size = CGSize(width: 40, height: 80)
-        image = CPIcon.of(.icClose) ?? UIImage()
-        configure(for: annotation)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func configure(for annotation: MKAnnotation?) {
-        displayPriority = .required
-        if let obj = annotation as? MapPinStoresAnotations {
-            markerTintColor = UIColor.blue
-            if let icon = obj.icon {
-                self.glyphImage = PinImage(named: icon)
-            } else if Double(obj.rate) == 4 {
-                self.glyphText = obj.rate
-            } else {
-                self.glyphImage = CPIcon.of(.icPoint)!
-            }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            let pin = mapView.view(for: annotation) ?? MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            pin.image = CPIcon.of(.icPoint)!
+            return pin
         } else {
-            self.glyphImage = CPIcon.of(.icDelevery)!
+            if let annotation = annotation as? YPCustomAnnotationView {
+                let view = MKAnnotationView(annotation: annotation as? MKAnnotation, reuseIdentifier: annotation.identifier)
+                view.isEnabled = true
+                view.canShowCallout = true
+                let btn = UIButton(type: .detailDisclosure)
+                view.rightCalloutAccessoryView = btn
+            }
         }
-    }
-}
-
-class PinImage: UIImage {
-    convenience init?(named name: String) {
-        self.init(cgImage: CPIcon.of(.icPoint)!.cgImage!)
-    }
-    override func withRenderingMode(_ renderingMode: UIImage.RenderingMode) -> UIImage {
-        return self
+        return nil
     }
 }

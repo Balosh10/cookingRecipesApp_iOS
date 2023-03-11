@@ -11,6 +11,12 @@ import UIKit
 
 protocol MapViewProtocol: AnyObject {
     var presenter: MapPresenterProtocol? { get set }
+    func initUI()
+    func setupLocation()
+    func acZoomPlus()
+    func acZoomRest()
+    func loadAddressMap(lat: Double, long: Double)
+    func loadInfoLocation()
 }
 
 protocol MapRouterProtocol: AnyObject {
@@ -29,21 +35,6 @@ protocol MapInteractorOutputProtocol: AnyObject {
 
 protocol MapInteractorInputProtocol: AnyObject {
     var presenter: MapInteractorOutputProtocol? { get set }
-    var localDatamanager: MapLocalDataManagerInputProtocol? { get set }
-    var remoteDatamanager: MapRemoteDataManagerInputProtocol? { get set }
     var recipeDatailData: CollectionRecipesAvailable? { get set }
-
 }
 
-protocol MapDataManagerInputProtocol: AnyObject {
-}
-
-protocol MapRemoteDataManagerInputProtocol: AnyObject {
-    var remoteRequestHandler: MapRemoteDataManagerOutputProtocol? { get set }
-}
-
-protocol MapRemoteDataManagerOutputProtocol: AnyObject {
-}
-
-protocol MapLocalDataManagerInputProtocol: AnyObject {
-}

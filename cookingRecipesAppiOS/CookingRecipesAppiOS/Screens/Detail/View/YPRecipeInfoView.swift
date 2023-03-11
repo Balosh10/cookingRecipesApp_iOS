@@ -67,7 +67,12 @@ internal class YPRecipeInfoView: UIView {
         var btnLocation = UIButton()
         btnLocation.translatesAutoresizingMaskIntoConstraints = false
         btnLocation.backgroundColor = .clear
-        btnLocation.setImage(CPIcon.of(.icDelevery), for: .normal)
+        let icLocation = UIImage(systemName: "location")?.withTintColor(.CPWhite100,
+                                                                  renderingMode: .alwaysOriginal)
+        if let icon = icLocation {
+            btnLocation.setImage(icon, for: .normal)
+        }
+        btnLocation.radiusView(radius: 15, UIColor.CPSecundary)
         return btnLocation
     }()
     weak var delegate: YPRecipeInfoDelegate?

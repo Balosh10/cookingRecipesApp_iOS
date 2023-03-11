@@ -12,12 +12,6 @@ class MapInteractor: MapInteractorInputProtocol {
 
     // MARK: Properties
     weak var presenter: MapInteractorOutputProtocol?
-    var localDatamanager: MapLocalDataManagerInputProtocol?
-    var remoteDatamanager: MapRemoteDataManagerInputProtocol?
-    var recipeDatailData: CollectionRecipesAvailable? 
+    var recipeDatailData: CollectionRecipesAvailable?
 
-}
-
-extension MapInteractor: MapRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
 }

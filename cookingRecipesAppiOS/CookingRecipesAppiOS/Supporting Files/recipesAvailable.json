@@ -3,6 +3,9 @@
         "id": 1,
         "imagen": "seaFoodSoup",
         "name": "RECETA DE SOPA DE MARISCOS",
+        "genres": "Sopas",
+        "qualification": "5",
+        "deliveryTime": "15",
         "description": "Olvídate de los platillos aburridos y mejor prepara esta sopa de mariscos para una comida familiar o como parte de un menú de la semana. Además, gracias a Del Monte® tenemos las verduras más frescas que nos facilitarán la cocción de nuestro platillo. ¡Prueba esta rica sopa de mariscos, está llena de sabor!",
         "ingredients": [
             "suficiente de PAM Aceite en aerosol",
@@ -14,13 +17,16 @@
             "1/4 tazas de pasta de tomate",
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
-            "2 laurel"
+            "1 tortillas"
         ]
     },
     {
         "id": 2,
         "imagen": "soupMushroom",
         "name": "CALDO DE HONGOS CON EPAZOTE",
+        "genres": "Sopas",
+        "qualification": "2",
+        "deliveryTime": "20",
         "description": "Olvídate de los platillos aburridos y mejor prepara esta sopa de mariscos para una comida familiar o como parte de un menú de la semana. Además, gracias a Del Monte® tenemos las verduras más frescas que nos facilitarán la cocción de nuestro platillo. ¡Prueba esta rica sopa de epazote, está llena de sabor!",
         "ingredients": [
             "suficiente de PAM Aceite en aerosol",
@@ -32,13 +38,16 @@
             "1/4 tazas de pasta de tomate",
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
-            "2 laurel"
+            "2 tortillas"
         ]
     },
     {
         "id": 3,
         "imagen": "brandadeCod",
         "name": "Brandada de bacalao",
+        "genres": "Sopas",
+        "qualification": "4",
+        "deliveryTime": "1:10",
         "description": "Brandada de bacalao: receta de la más deliciosa crema para untar sin cansarse",
         "ingredients": [
             "suficiente de PAM Aceite en aerosol",
@@ -50,13 +59,16 @@
             "1/4 tazas de pasta de tomate",
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
-            "2 laurel"
+            "3 tortillas"
         ]
     },
     {
         "id": 4,
         "imagen": "potatoMayonnaise",
         "name": "Ensaladilla de patata con mayonesa de limón y mostaza",
+        "genres": "Sopas",
+        "qualification": "1",
+        "deliveryTime": "4:20",
         "description": "Cocemos las patatas lavadas con piel con abundante agua, según su tamaño, unos 30 minutos; lo mejor es comprobar el punto pinchando con una brocheta en la parte más gruesa. Si entra con facilidad, están listas y las podemos retirar.",
         "ingredients": [
             "suficiente de PAM Aceite en aerosol",
@@ -68,7 +80,7 @@
             "1/4 tazas de pasta de tomate",
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
-            "2 laurel"
+            "4 tortillas"
         ]
     }
 ]

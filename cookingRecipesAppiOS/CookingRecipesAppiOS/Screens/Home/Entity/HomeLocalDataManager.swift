@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomeLocalDataManager:HomeLocalDataManagerInputProtocol {
-    
+class HomeLocalDataManager: HomeLocalDataManagerInputProtocol {
+    var allRecipes: [CollectionRecipesAvailable]? = Bundle.main.decode([CollectionRecipesAvailable].self, from: "recipesAvailable.json")
     
 }

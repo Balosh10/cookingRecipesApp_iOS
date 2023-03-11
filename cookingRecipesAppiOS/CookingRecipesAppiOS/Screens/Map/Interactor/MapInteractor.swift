@@ -14,6 +14,7 @@ class MapInteractor: MapInteractorInputProtocol {
     weak var presenter: MapInteractorOutputProtocol?
     var localDatamanager: MapLocalDataManagerInputProtocol?
     var remoteDatamanager: MapRemoteDataManagerInputProtocol?
+    var recipeDatailData: CollectionRecipesAvailable? 
 
 }
 

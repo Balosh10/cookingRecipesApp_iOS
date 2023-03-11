@@ -8,21 +8,29 @@
 
 import Foundation
 
-class DetailPresenter  {
-    
+class DetailPresenter {
     // MARK: Properties
     weak var view: DetailViewProtocol?
     var interactor: DetailInteractorInputProtocol?
     var router: DetailRouterProtocol?
-    
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
-    // TODO: implement presenter methods
     func viewDidLoad() {
+        view?.initUI()
+        interactor?.getInfo()
+    }
+    func presentMapRecipe() {
+        interactor?.getRecipeDetail()
     }
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {
-    // TODO: implement interactor output methods
+    func loadData(detail: CollectionRecipesAvailable, recommendedRecipes: [CollectionRecipesAvailable]) {
+        view?.loadInfoRecipe(detail: detail,
+                             recommendedRecipes: recommendedRecipes)
+    }
+    func presentMapRecipe(detail: CollectionRecipesAvailable) {
+        router?.presentMapRecipe(from: view, recipeData: detail)
+    }
 }

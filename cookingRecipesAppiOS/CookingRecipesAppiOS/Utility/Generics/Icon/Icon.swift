@@ -14,6 +14,8 @@ enum CpImagen: String {
     case potatoMayonnaise
     case defaultPlaceholder
     case icClose
+    case icPoint
+    case icDelevery
 }
 
 struct CPIcon {

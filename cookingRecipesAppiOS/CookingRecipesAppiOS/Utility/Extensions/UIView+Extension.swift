@@ -8,27 +8,12 @@
 import UIKit
 
 extension UIView {
-    func gradient(width:CGFloat,
-                  height:CGFloat,
-                  color: [CGColor]) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.type = .axial
-        gradientLayer.colors = color
-        gradientLayer.locations = [0, 0.4, 1]
-        gradientLayer.frame = CGRect(x: 0,
-                                     y: 0,
-                                     width: width,
-                                     height: height)
-        layer.insertSublayer(gradientLayer, at:0)
-    }
-    
-    func radiusView(radius: CGFloat = 10.0, _ backgroundColor: UIColor = .CPWhite100){
+    func radiusView(radius: CGFloat = 10.0, _ backgroundColor: UIColor = .CPWhite100) {
         layer.cornerRadius = radius
         clipsToBounds = true
         self.backgroundColor = backgroundColor
     }
-    
-    func viewShadow(isRadius:Bool = true) {
+    func viewShadow(isRadius: Bool = true) {
         layer.masksToBounds = false
         layer.cornerRadius = isRadius ? 8 :0
         layer.borderWidth = isRadius ? 0.1 : 0.3
@@ -45,9 +30,7 @@ extension UIView {
         addGestureRecognizer(tap)
         isUserInteractionEnabled = true
     }
-    @objc func handleTap(_ sender: MyTapGestureRecognizer){
+    @objc func handleTap(_ sender: MyTapGestureRecognizer) {
         sender.action!()
     }
 }
-
-

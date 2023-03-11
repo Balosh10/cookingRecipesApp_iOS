@@ -24,12 +24,6 @@ class RecipesAvailableCollectionViewCell: UICollectionViewCell {
         lbTitle.font = CPFont.gothamMedium.size(.medium)
         return lbTitle
     }()
-    private var dataView: UIView = {
-        var dataView = UIView()
-        dataView.translatesAutoresizingMaskIntoConstraints = false
-        dataView.backgroundColor = .clear
-        return dataView
-    }()
     private var viewContent: UIView = {
         var contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +41,7 @@ class RecipesAvailableCollectionViewCell: UICollectionViewCell {
     func setupViews() {
         backgroundColor = UIColor.clear
         contentView.addSubview(viewContent)
-        [recipeAvailableImage, dataView].forEach({viewContent.addSubview($0)})
-        dataView.addSubview(lbTitle)
+        [recipeAvailableImage, lbTitle].forEach({viewContent.addSubview($0)})
         NSLayoutConstraint.activate([
             viewContent.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewContent.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -60,27 +53,20 @@ class RecipesAvailableCollectionViewCell: UICollectionViewCell {
             recipeAvailableImage.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor),
             recipeAvailableImage.topAnchor.constraint(equalTo: viewContent.topAnchor),
             recipeAvailableImage.heightAnchor.constraint(equalToConstant: 150),
-            dataView.leadingAnchor.constraint(equalTo: viewContent.leadingAnchor),
-            dataView.trailingAnchor.constraint(equalTo: viewContent.trailingAnchor),
-            dataView.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor),
-            dataView.topAnchor.constraint(equalTo: recipeAvailableImage.bottomAnchor),
-            dataView.bottomAnchor.constraint(equalTo: viewContent.bottomAnchor),
-            lbTitle.leadingAnchor.constraint(equalTo: dataView.leadingAnchor, constant: 8),
-            lbTitle.topAnchor.constraint(equalTo: dataView.topAnchor, constant: 8),
-            lbTitle.trailingAnchor.constraint(equalTo: dataView.trailingAnchor, constant: -8),
-            lbTitle.bottomAnchor.constraint(equalTo: dataView.bottomAnchor, constant: -8)
+            lbTitle.leadingAnchor.constraint(equalTo: viewContent.leadingAnchor, constant: 8),
+            lbTitle.trailingAnchor.constraint(equalTo: viewContent.trailingAnchor),
+            lbTitle.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor, constant: -8),
+            lbTitle.topAnchor.constraint(equalTo: recipeAvailableImage.bottomAnchor, constant: 8),
+            lbTitle.bottomAnchor.constraint(equalTo: viewContent.bottomAnchor, constant: -8)
         ])
     }
     func loadView(item: CollectionRecipesAvailable) {
-        recipeAvailableImage.setTopCornerRadius(rect: CGRect(x: 0,
-                                                             y: 0,
-                                                             width: contentView.frame.width,
-                                                              height: 150))
+        let rect = CGRect(x: 0, y: 0, width: contentView.frame.width, height: 150)
+        recipeAvailableImage.setTopCornerRadius(rect: rect)
         let name = item.name.lowercased().capitalizingFirstLetter()
         lbTitle.attributedText = NSMutableAttributedString().boldText(name, .CPText100, .left)
-        guard let image = CPIcon.of(CpImagen.init(rawValue: item.imagen) ?? .defaultPlaceholder) else {
-            return
+        if let image = CPIcon.of(CpImagen.init(rawValue: item.imagen) ?? .defaultPlaceholder) {
+            recipeAvailableImage.image = image
         }
-        recipeAvailableImage.image = image
     }
 }

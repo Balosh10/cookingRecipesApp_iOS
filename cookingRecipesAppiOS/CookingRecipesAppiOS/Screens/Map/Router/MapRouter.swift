@@ -9,16 +9,14 @@
 import Foundation
 import UIKit
 
-class MapRouter: MapRouterProtocol {
-
-    class func createMapModule() -> UIViewController {
+class MapRouter: MapRouterProtocol {    
+    class func createMapModule(_ recipeDatailData: CollectionRecipesAvailable) -> UIViewController {
         let view: MapViewProtocol = MapView()
         let presenter: MapPresenterProtocol & MapInteractorOutputProtocol = MapPresenter()
         let interactor: MapInteractorInputProtocol & MapRemoteDataManagerOutputProtocol = MapInteractor()
         let localDataManager: MapLocalDataManagerInputProtocol = MapLocalDataManager()
         let remoteDataManager: MapRemoteDataManagerInputProtocol = MapRemoteDataManager()
         let router: MapRouterProtocol = MapRouter()
-        
         view.presenter = presenter
         presenter.view = view
         presenter.router = router
@@ -26,15 +24,10 @@ class MapRouter: MapRouterProtocol {
         interactor.presenter = presenter
         interactor.localDatamanager = localDataManager
         interactor.remoteDatamanager = remoteDataManager
+        interactor.recipeDatailData = recipeDatailData
         remoteDataManager.remoteRequestHandler = interactor
-        
         guard let view = view as? UIViewController else { return UIViewController() }
         return view
 
     }
-    
-    static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "MapView", bundle: Bundle.main)
-    }
-    
 }

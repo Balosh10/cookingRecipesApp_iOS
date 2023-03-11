@@ -11,4 +11,3 @@ public extension UIDevice {
         UIDevice.current.userInterfaceIdiom == .phone
     }
 }
-

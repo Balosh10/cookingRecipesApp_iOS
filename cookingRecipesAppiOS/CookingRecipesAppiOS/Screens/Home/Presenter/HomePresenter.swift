@@ -23,6 +23,9 @@ extension HomePresenter: HomePresenterProtocol {
     func searchRecipe(text: String? = nil) {
         interactor?.searchRecipe(text: text)
     }
+    func fetchRecipeDetail(_ item: CollectionRecipesAvailable) {
+        router?.presentRecipeDetail(from: view, recipeData: item)
+    }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {

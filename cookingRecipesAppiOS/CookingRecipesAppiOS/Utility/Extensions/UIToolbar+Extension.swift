@@ -12,4 +12,3 @@ extension UIToolbar {
         setBackgroundImage(image, forToolbarPosition: .any, barMetrics: .default)
     }
 }
-

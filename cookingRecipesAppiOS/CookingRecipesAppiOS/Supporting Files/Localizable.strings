@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  CookingRecipesAppiOS
+
+  Created by osvaldo cespedes on 10/03/23.
+  
+*/
+// HomeView
+
+"searchPlaceholder" = "Escribe una receta";
+"recipesAvailable" = "Recetas disponibles";
+
+//Detail Recipe
+"ingredients" = "Ingredientes";
+"recommendedRecipes" = "Recetas recomendadas";
+"hour" = "Horas";
+"minute" = "Minutos";
+"dealerDelevery" = "Repartidor";
+
+//Map Recipe
+

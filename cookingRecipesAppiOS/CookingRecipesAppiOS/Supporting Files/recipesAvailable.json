@@ -18,7 +18,9 @@
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
             "1 tortillas"
-        ]
+        ],
+        "latitude": 25.6517245,
+        "longitude": -100.3375256
     },
     {
         "id": 2,
@@ -39,7 +41,9 @@
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
             "2 tortillas"
-        ]
+        ],
+        "latitude": 25.6565983,
+        "longitude": -100.3458858
     },
     {
         "id": 3,
@@ -60,7 +64,9 @@
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
             "3 tortillas"
-        ]
+        ],
+        "latitude": 25.6615455,
+        "longitude": -100.346732
     },
     {
         "id": 4,
@@ -81,6 +87,93 @@
             "2 cucharadas de Chiles chipotle Del Monte®",
             "6 tazas de agua",
             "4 tortillas"
-        ]
+        ],
+        "latitude": 25.6654177,
+        "longitude": -100.3575971
+    },
+    {
+        "id": 5,
+        "imagen": "tingaPollo",
+        "name": "Tinga de Pollo",
+        "genres": "Comida",
+        "qualification": "4",
+        "deliveryTime": "20",
+        "description": "En tu menú no puede faltar esta PRÁCTICA y FÁCIL TINGA de POLLO preparada con CONSOMATE®. Perfecta para unas tostadas con MEDIA CREMA NESTLÉ®.",
+        "ingredients": [
+            "2 Cubos de Concentrado de Tomate con Pollo CONSOMATE®",
+            "1 Chile chipotle adobado",
+            "1 Taza de puré de tomate natural",
+            "1/4 De taza de agua",
+            "3 Jitomates cortados en cuartos",
+            "2 Cucharadas de aceite de vegetal",
+            "1/4 De pieza de cebolla fileteada",
+            "1 Pechuga de pollo cocida y deshebrada (600 g)",
+            "Tostadas de maíz de maíz",
+            "2 Tazas de lechuga desinfectada y fileteada"
+        ],
+        "latitude": 25.6654177,
+        "longitude": -100.3575971
+    },
+    {
+        "id": 6,
+        "imagen": "carneChile",
+        "name": "Carne con chile",
+        "genres": "Comida",
+        "qualification": "5",
+        "deliveryTime": "5",
+        "description": "CARNE CON CHILE preparada con CONCENTRADO DE TOMATE CON POLLO CONSOMATE®.",
+        "ingredients": [
+            "1 Kilogramo Carne de res falda, para deshebrar",
+            "4 Piezas Ajo",
+            "1/2 Pieza Cebolla",
+            "3 Piezas Chile guajillo sin semillas y remojados en agua caliente",
+            "2 Piezas Ajo asados",
+            "1/4 Pieza Cebolla asada",
+            "1 Cucharadita Orégano seco molido",
+            "2 Cubos Concentrado de Tomate con Pollo CONSOMATE®",
+            "1/4 Cucharada Comino",
+            "1 Cucharada Aceite de maíz",
+            "1 Paquete Tortillas de harina",
+            "2 Tazas Agua de donde se coció la carne",
+            "2 Litros Agua"
+        ],
+        "latitude": 25.6654177,
+        "longitude": -100.3575971
+    },
+    {
+        "id": 7,
+        "imagen": "alitasSalsa",
+        "name": "Alitas con Salsa de 3 Chiles",
+        "genres": "Comida",
+        "qualification": "4",
+        "deliveryTime": "1",
+        "description": "Para este verano no pueden faltar unas ALITAS con SALSA de 3 CHILES con el sazón de JUGO MAGGI y KIRKLAND Signature Pimienta Negra. El éxito del verano.",
+        "ingredients": [
+            "5 Jitomates asados",
+            "1/4 de Pieza de cebolla asada",
+            "3 Chiles pasilla remojados en agua caliente",
+            "3 Chiles guajillo remojados en agua caliente",
+            "1/2 Taza de chile chipotle"
+        ],
+        "latitude": 25.6517245,
+        "longitude": -100.3375256
+    },
+    {
+        "id": 8,
+        "imagen": "tortaArroz",
+        "name": "Tortas de Arroz",
+        "genres": "Comida",
+        "qualification": "4",
+        "deliveryTime": "1",
+        "description": "Unas tortitas también pueden ser de arroz, por eso prepara esta receta de tortitas de ARROZ sazonada con SALSA TIPO INGLESA CROSSE & BLACKWELL®.",
+        "ingredients": [
+            "2 1/2 Tazas de arroz cocido",
+            "1/2 Taza de queso panela rallado",
+            "4 Ramas de perejil desinfectado y picado finamente",
+            "1/2 Chile serrano picado finamente",
+            "2 Huevos ligeramente batidos"
+        ],
+        "latitude": 25.6517245,
+        "longitude": -100.3375256
     }
 ]

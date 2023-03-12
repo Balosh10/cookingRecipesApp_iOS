@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class YPRecipeDetailView: UIViewController {
-    private lazy var contentView: UIView = {
+    private var contentView: UIView = {
         var viewContent = UIView()
         viewContent.translatesAutoresizingMaskIntoConstraints = false
         viewContent.backgroundColor = .clear
         return viewContent
     }()
-    private lazy var scrollView: UIScrollView = {
+    private var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = .clear
@@ -24,38 +24,52 @@ class YPRecipeDetailView: UIViewController {
         scrollView.indicatorStyle = .white
         return scrollView
     }()
-    private lazy var recipeImageView: YPRecipeInfoView = {
+    private var recipeImageView: YPRecipeInfoView = {
         var recipeImageView = YPRecipeInfoView()
         recipeImageView.translatesAutoresizingMaskIntoConstraints = false
         recipeImageView.backgroundColor = .clear
         recipeImageView.contentMode = .scaleToFill
         return recipeImageView
     }()
-    private lazy var recommendedRecipesView: YPRecommendedRecipesView = {
+    private var recommendedRecipesView: YPRecommendedRecipesView = {
         var recommendedRecipesView = YPRecommendedRecipesView()
         recommendedRecipesView.translatesAutoresizingMaskIntoConstraints = false
         recommendedRecipesView.backgroundColor = .clear
         return recommendedRecipesView
     }()
-    private lazy var lbOverview: UILabel = {
+    private var lbOverview: UILabel = {
         var lbOverview = UILabel()
         lbOverview.translatesAutoresizingMaskIntoConstraints = false
         lbOverview.numberOfLines = 0
-        lbOverview.textColor = UIColor.CPText100
-        lbOverview.font = CPFont.gothamBook.size(.smail)
+        lbOverview.textColor = UIColor.YPText100
+        lbOverview.font = YPFont.gothamBook.size(.smail)
         return lbOverview
     }()
-    private lazy var btnBack: UIButton = {
+    private var btnBack: UIButton = {
         var btnBack = UIButton()
-        let iconBack = UIImage(systemName: "arrow.backward")?.withTintColor(.CPWhite100, renderingMode: .alwaysOriginal)
+        let iconBack = UIImage(systemName: "arrow.backward")?.withTintColor(.YPWhite100,
+                                                                            renderingMode: .alwaysOriginal)
         btnBack.setImage(iconBack, for: .normal)
-        btnBack.radiusView(radius: 22, .CPPrincipal)
-        btnBack.backgroundColor = .CPPrincipal.withAlphaComponent(0.7)
+        btnBack.radiusView(radius: 22, .YPPrincipal)
+        btnBack.backgroundColor = .YPPrincipal.withAlphaComponent(0.8)
         btnBack.translatesAutoresizingMaskIntoConstraints = false
         return btnBack
     }()
+    private var btnLocation: UIButton = {
+        var btnLocation = UIButton()
+        btnLocation.translatesAutoresizingMaskIntoConstraints = false
+        btnLocation.backgroundColor = .clear
+        let icLocation = UIImage(systemName: "location")?.withTintColor(.YPWhite100,
+                                                                        renderingMode: .alwaysOriginal)
+        if let icon = icLocation {
+            btnLocation.setImage(icon, for: .normal)
+        }
+        btnLocation.radiusView(radius: 22, UIColor.YPPrincipal)
+        btnLocation.backgroundColor = .YPPrincipal.withAlphaComponent(0.8)
+        return btnLocation
+    }()
     // MARK: Properties
-    var presenter: DetailPresenterProtocol?
+    var presenter: YPDetailPresenterProtocol?
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -64,21 +78,25 @@ class YPRecipeDetailView: UIViewController {
     }
 }
 
-extension YPRecipeDetailView: DetailViewProtocol {
+extension YPRecipeDetailView: YPDetailViewProtocol {
     func initUI() {
-        recipeImageView.delegate = self
-        statusBarView(color: UIColor.CPBase100)
+        statusBarView(color: UIColor.YPBase100)
         setupScrollView()
         contentViews()
     }
     func setupScrollView() {
-        view.backgroundColor = .CPBase100
-        [btnBack, scrollView].forEach({ view.addSubview($0)})
+        view.backgroundColor = .YPBase100
+        [btnBack, btnLocation, scrollView].forEach({ view.addSubview($0)})
         view.bringSubviewToFront(btnBack)
+        view.bringSubviewToFront(btnLocation)
         scrollView.bringSubviewToFront(scrollView)
         scrollView.addSubview(contentView)
         scrollView.bringSubviewToFront(contentView)
         NSLayoutConstraint.activate([
+            btnLocation.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            btnLocation.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            btnLocation.heightAnchor.constraint(equalToConstant: 44),
+            btnLocation.widthAnchor.constraint(equalToConstant: 44),
             btnBack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             btnBack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             btnBack.heightAnchor.constraint(equalToConstant: 44),
@@ -97,6 +115,10 @@ extension YPRecipeDetailView: DetailViewProtocol {
         ])
         btnBack.addTapGesture { [weak self] in
             self?.dismiss(animated: true)
+        }
+        btnLocation.addTapGesture { [weak self] in
+            guard let self = self else { return }
+            self.presenter?.presentMapRecipe()
         }
     }
     func contentViews() {
@@ -120,42 +142,37 @@ extension YPRecipeDetailView: DetailViewProtocol {
             recommendedRecipesView.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
-    func loadInfoRecipe(detail: CollectionRecipesAvailable,
-                        recommendedRecipes: [CollectionRecipesAvailable]) {
+    func loadInfoRecipe(detail: YPCollectionRecipesAvailable,
+                        recommendedRecipes: [YPCollectionRecipesAvailable]) {
         recipeImageView.loadInfoRecipe(data: detail)
         let info = NSMutableAttributedString()
         info.append(NSMutableAttributedString().boldText("2023 Marzo 20",
-                                                         .CPPrincipal,
+                                                         .YPPrincipal,
                                                          .left,
                                                          .medium))
         info.append(NSMutableAttributedString().normalText("\n\n\(detail.description)",
-                                                           .CPText100,
+                                                           .YPText100,
                                                            .left,
                                                            .medium))
         if !detail.ingredients.isEmpty {
             info.append(NSMutableAttributedString().boldText("\n\n\n\(Localizable.text(.ingredients)):\n\n",
-                                                               .CPPrincipal,
+                                                               .YPPrincipal,
                                                                .left,
                                                                .medium))
             let icStar = NSTextAttachment()
-            let imageIcon = CPIcon.of(.icPoint)!
+            let imageIcon = YPIcon.of(.icPoint)!
             icStar.image = imageIcon
             icStar.bounds = CGRect(x: 0, y: -1, width: 6, height: 6)
             let image1String = NSAttributedString(attachment: icStar)
             detail.ingredients.forEach { item in
                 info.append(image1String)
                 info.append(NSMutableAttributedString().normalText(".- \(item.capitalizingFirstLetter())\n",
-                                                                   .CPText100,
+                                                                   .YPText100,
                                                                    .left,
                                                                    .medium))
             }
         }
         lbOverview.attributedText = info
         recommendedRecipesView.loadData(recipes: recommendedRecipes)
-    }
-}
-extension YPRecipeDetailView: YPRecipeInfoDelegate {
-    func location() {
-        presenter?.presentMapRecipe()
     }
 }

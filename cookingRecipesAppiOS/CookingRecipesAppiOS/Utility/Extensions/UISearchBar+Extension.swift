@@ -42,12 +42,12 @@ extension UISearchBar {
     func style() {
         returnKeyType = .done
         enablesReturnKeyAutomatically = false
-        setBackgroundColor(withColor: UIColor.CPRed100)
+        setBackgroundColor(withColor: UIColor.YPRed100)
         tintColor = .white
-        backgroundColor = UIColor.CPBase100
+        backgroundColor = UIColor.YPBase100
         showsBookmarkButton = true
         if let image = UIImage(systemName: "magnifyingglass") {
-            setImage(image.withTintColor(.CPPrincipal,
+            setImage(image.withTintColor(.YPPrincipal,
                                          renderingMode: .alwaysOriginal),
                                          for: .bookmark,
                                          state: .normal)
@@ -58,17 +58,17 @@ extension UISearchBar {
             let textField = searchTextField
             textField.leftViewMode = .never
             textField.leftView = nil
-            let attributes = [NSAttributedString.Key.foregroundColor: UIColor.CPText100]
+            let attributes = [NSAttributedString.Key.foregroundColor: UIColor.YPText100]
             textField.defaultTextAttributes = attributes
             textField.layer.borderWidth = 0
             textField.layer.cornerRadius = 12
             textField.layer.borderColor = UIColor.clear.cgColor
-            textField.backgroundColor = .CPBase200
-            textField.tintColor = .CPText100
+            textField.backgroundColor = .YPBase200
+            textField.tintColor = .YPText100
         } else {
             setImage(UIImage(), for: .search, state: .normal)
             setPositionAdjustment(UIOffset(horizontal: -20, vertical: 0), for: .search)
-            setTextField(color: .CPBase200)
+            setTextField(color: .YPBase200)
         }
     }
 }

@@ -9,13 +9,12 @@ import UIKit
 
 extension NSMutableAttributedString {
     func boldText(_ value: String,
-                  _ color: UIColor = UIColor.CPWhite100,
+                  _ color: UIColor = UIColor.YPWhite100,
                   _ alignment: NSTextAlignment = .center,
-                  _ size: CPSizeTitle = .smail,
+                  _ size: YPSizeTitle = .smail,
                   _ background: UIColor = UIColor.clear) -> NSMutableAttributedString {
-        
-        var attributes:[NSAttributedString.Key: Any] = [:]
-        attributes[.font] = CPFont.gothamMedium.size(size)
+        var attributes: [NSAttributedString.Key: Any] = [:]
+        attributes[.font] = YPFont.gothamMedium.size(size)
         attributes[.foregroundColor] = color
         attributes[.backgroundColor] = background
         self.append(NSAttributedString(string: value, attributes: attributes))
@@ -24,16 +23,16 @@ extension NSMutableAttributedString {
         paragraphStyle.alignment = alignment
         self.addAttribute(NSAttributedString.Key.paragraphStyle,
                           value: paragraphStyle,
-                          range: NSMakeRange(0, self.length))
+                          range: NSRange(location: 0, length: self.length))
         return self
     }
     func normalText(_ value: String,
-                    _ color: UIColor = UIColor.CPText100,
+                    _ color: UIColor = UIColor.YPText100,
                     _ alignment: NSTextAlignment = .center,
-                    _ size: CPSizeTitle = .medium,
+                    _ size: YPSizeTitle = .medium,
                     isBold: Bool = false) -> NSMutableAttributedString {
-        let font = isBold ? CPFont.gothamMedium.size(size) : CPFont.gothamBook.size(size)
-        var attributes: [NSAttributedString.Key : Any] = [:]
+        let font = isBold ? YPFont.gothamMedium.size(size) : YPFont.gothamBook.size(size)
+        var attributes: [NSAttributedString.Key: Any] = [:]
         attributes[.font] = font
         attributes[.foregroundColor] = color
         self.append(NSAttributedString(string: value, attributes: attributes))
@@ -42,7 +41,7 @@ extension NSMutableAttributedString {
         paragraphStyle.alignment = alignment
         self.addAttribute(NSAttributedString.Key.paragraphStyle,
                           value: paragraphStyle,
-                          range: NSMakeRange(0, self.length))
+                          range: NSRange(location: 0, length: self.length) )
         return self
     }
 }

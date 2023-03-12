@@ -13,8 +13,8 @@ internal class YPRecommendedRecipesView: UIView {
         lbTitle.translatesAutoresizingMaskIntoConstraints = false
         lbTitle.numberOfLines = 0
         lbTitle.text = Localizable.text(.recommendedRecipes)
-        lbTitle.textColor = UIColor.CPPrincipal
-        lbTitle.font = CPFont.gothamMedium.size(.large)
+        lbTitle.textColor = UIColor.YPPrincipal
+        lbTitle.font = YPFont.gothamMedium.size(.large)
         return lbTitle
     }()
     private lazy var contentView: UIView = {
@@ -22,8 +22,8 @@ internal class YPRecommendedRecipesView: UIView {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         return contentView
     }()
-    var recipesAvailableCollectionView: UIRecipeCollectionView = {
-        var recipesAvailable = UIRecipeCollectionView(frame: .zero)
+    var recipesAvailableCollectionView: YPUIRecipeCollectionView = {
+        var recipesAvailable = YPUIRecipeCollectionView(frame: .zero)
         recipesAvailable.translatesAutoresizingMaskIntoConstraints = false
         recipesAvailable.scrollDirection = YPScrollDirection.horizontal.rawValue
         recipesAvailable.layoutIfNeeded()
@@ -57,7 +57,7 @@ internal class YPRecommendedRecipesView: UIView {
             recipesAvailableCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
-    func loadData(recipes: [CollectionRecipesAvailable]) {
+    func loadData(recipes: [YPCollectionRecipesAvailable]) {
         recipesAvailableCollectionView.loadData(recipesAvailable: recipes)
     }
 }

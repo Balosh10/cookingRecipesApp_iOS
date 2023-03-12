@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let homeView = HomeRouter.createHomeModule()
+        let homeView = YPHomeRouter.createHomeModule()
         window?.rootViewController = UINavigationController(rootViewController: homeView)
         window?.makeKeyAndVisible()
     }

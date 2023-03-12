@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @nonobjc extension UIViewController {
-    func statusBarView(color: UIColor = UIColor.CPPrincipal) {
+    func statusBarView(color: UIColor = UIColor.YPPrincipal) {
         if #available(iOS 13.0, *) {
             let keyWindow = UIApplication.shared.connectedScenes
                 .filter({$0.activationState == .foregroundActive})

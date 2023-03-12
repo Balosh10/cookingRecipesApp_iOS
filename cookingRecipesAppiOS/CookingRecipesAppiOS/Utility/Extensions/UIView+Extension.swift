@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    func radiusView(radius: CGFloat = 10.0, _ backgroundColor: UIColor = .CPWhite100) {
+    func radiusView(radius: CGFloat = 10.0, _ backgroundColor: UIColor = .YPWhite100) {
         layer.cornerRadius = radius
         clipsToBounds = true
         self.backgroundColor = backgroundColor
@@ -24,13 +24,13 @@ extension UIView {
         layer.shadowRadius = 2.0
     }
     func addTapGesture(action: @escaping () -> Void) {
-        let tap = MyTapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        let tap = YPTapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.action = action
         tap.numberOfTapsRequired = 1
         addGestureRecognizer(tap)
         isUserInteractionEnabled = true
     }
-    @objc func handleTap(_ sender: MyTapGestureRecognizer) {
+    @objc func handleTap(_ sender: YPTapGestureRecognizer) {
         sender.action!()
     }
 }

@@ -9,3 +9,6 @@ El tipo de fuente es GOTHAM.
 Implementacion de genericos ejemplo UICollectionView para mostrar las recetas en la pantalla HOME y Detail.
 Al ingresar a la pantalla del mapa se muestra el origen de la receta.
 Las pruebas Unitarias se realizaron en diferentes dispositos, al mas pequeño iPHONE SE 2 Generacion y al mas grande iPHONE 14 PRO MAX
+
+
+Link Github https://github.com/Balosh10/cookingRecipesApp_iOS
